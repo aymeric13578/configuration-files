@@ -1,0 +1,49 @@
+server:
+  port: 7000
+spring:
+  application:
+    name: getaway-server
+  cloud:
+    gateway:
+      routes:
+        - id: auth-route
+          uri: lb://auth-service
+          predicates:
+            - Path=/auth/**
+          filters:
+            - AddResponseHeader=X-powered-By, Code with aymeric
+        - id: user-route
+          uri: lb://user-service
+          predicates:
+            - Path=/user/**
+          filters:
+            - AddResponseHeader=X-powered-By, Code with aymeric
+        - id: music-route
+          uri: lb://music-service
+          predicates:
+            - Path=/music/**
+          filters:
+            - AddResponseHeader=X-powered-By, Code with aymeric
+        - id: task-scheduler-route
+          uri: lb://task-scheduler-service
+          predicates:
+            - Path=/task-scheduler/**
+          filters:
+            - AddResponseHeader=X-powered-By, Code with aymeric
+        - id: messaging-route
+          uri: lb://messaging-service
+          predicates:
+            - Path=/messaging/**
+          filters:
+            - AddResponseHeader=X-powered-By, Code with aymeric
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+    gateway:
+      enabled: true
