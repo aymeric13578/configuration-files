@@ -10,9 +10,9 @@ jwt:
 
 keycloak:
   realm: aymeric-music
-  domain: keycloak.codewithaymeric.com
+  domain: http://localhost:8080 #keycloak.codewithaymeric.com
   adminClientId: admin-cli
-  adminClientSecret: 4c0e1b2d-3f8a-4f5b-9a7c-6d0e1b2d3f8a
+  adminClientSecret: cWrHX7e3PM9oAmaUniuHHyabJxtiKPHV
   client: authenticationClientId
   uris:
     auth: https://${keycloak.domain}
