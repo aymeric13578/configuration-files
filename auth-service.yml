@@ -15,7 +15,7 @@ keycloak:
   adminClientSecret: cWrHX7e3PM9oAmaUniuHHyabJxtiKPHV
   client: authenticationClientId
   uris:
-    auth: https://${keycloak.domain}
+    auth: http://localhost:8080 #https://${keycloak.domain}
 spring:
   profile:
     active: prod
