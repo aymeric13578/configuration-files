@@ -1,7 +1,9 @@
 server:
   port: 7090
   servlet:
-    context-path: /auth
+    context-path: /auth-service
+      # Add this to prevent file downloads
+    register-default-servlet: false
 
 jwt:
   auth:
