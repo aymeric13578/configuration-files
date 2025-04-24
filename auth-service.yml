@@ -14,7 +14,7 @@ keycloak:
   realm: aymeric-music
   domain: http://localhost:8080 #keycloak.codewithaymeric.com
   adminClientId: admin-cli
-  adminClientSecret: cWrHX7e3PM9oAmaUniuHHyabJxtiKPHV
+  adminClientSecret: yLOPKb5qEWPbeGm7hivfA4Q2adMIKSFW
   client: authenticationClientId
   uris:
     auth: http://localhost:8080 #https://${keycloak.domain}
